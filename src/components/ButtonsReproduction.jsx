@@ -1,16 +1,14 @@
-import { useContext } from 'react'
 import {
   IconAfterSound,
   IconBeforeSound,
   IconMusicsRandom,
   IconPause,
   IconPlay,
-  IconRepiteSoun,
+  IconRepiteSoun
 } from '../icons/Icons'
 
-import { Howl, Howler } from 'howler'
-import { AudioContext } from '../Context/AudioContext'
 import { useAudio } from '../hooks/useAudio'
+import { useEffect, useRef, useState } from 'react'
 
 // const audio = new Audio('../assets/song.mp3')
 // audio.play()
@@ -21,27 +19,48 @@ import { useAudio } from '../hooks/useAudio'
 // console.log(audio)
 
 export const ButtonsReproduction = () => {
-  const { audioState, songState, volumen, setAudioState } = useAudio()
+  const [valueRangeState, setValueRange] = useState({ valueRep: 2 })
+  let cronometro
 
-  const audio = new Audio(
-    'https://manzdev.github.io/codevember2017/assets/eye-tiger.mp3'
-  )
+  const audioRef = useRef(null)
+  const { audioState, songState, durationSong, setAudioState } = useAudio()
 
-  function handleClick() {
-    const { songState } = audioState
-    // audio.currentTime --> Tiempo transcurrido
-    // audio.duration --> Duracion total en segundos
-    // audio.playbackRate --> Velocidad de reproduccion de audio, va de 0 hasta 4
+  const stopInterval = () => {
+    console.log(valueRangeState.valueRep)
+  }
+
+  // useEffect(() => {
+  //   if (audioRef.current.paused) {
+  //     cronometro = setInterval(() => {
+  //       if (valueRangeState.valueRep >= 4) {
+  //         stopInterval()
+  //       }
+
+  //       setValueRange({
+  //         valueRep: 2 + 2
+  //       })
+  //       console.log(valueRangeState.valueRep)
+  //     }, 1000)
+  //   }
+  // }, [])
+
+  clearInterval(cronometro)
+
+  const handleClick = () => {
+    audioRef.current.volume = 0.2
 
     setAudioState({
       ...audioState,
-      songState: songState ? false : true,
+      songState: !songState,
+      durationSong: audioRef.current.duration.toString().slice(0, 5),
+      currentTime: audioRef.current.currentTime.toString().slice(0, 5)
     })
 
-    songState === true ? audio.play() : audio.pause()
-    audio.volume = 0.2
-
-    console.log(songState)
+    if (audioRef.current.paused) {
+      audioRef.current.play()
+    } else {
+      audioRef.current.pause()
+    }
   }
 
   return (
@@ -53,22 +72,57 @@ export const ButtonsReproduction = () => {
           onClick={handleClick}
           className='bg-textComun hover:scale-105 active:scale-95 p-3 w-[33px] h-[33px] grid place-content-center rounded-full'
         >
-          {songState ? <IconPause w={19} h={19} /> : <IconPlay w={17} h={17} />}
+          {songState ? <IconPlay w={17} h={17} /> : <IconPause w={19} h={19} />}
         </button>
         <IconAfterSound />
         <IconRepiteSoun />
       </div>
 
-      <div className='flex gap-3 items-center'>
-        <p>0.00</p>
-        <input
-          className='hover:bg-textGreenSpotify range:bg-textComun w-[400px] h-1 bg-textGray opacity-80 rounded-lg cursor-pointer [&::-webkit-slider-thumb]:bg-groundDark [&::-webkit-slider-thumb]:h-40'
-          type='range'
-          min={0}
-          max={100}
-        />
-        <p>3.17</p>
+      <audio
+        src='https://manzdev.github.io/codevember2017/assets/eye-tiger.mp3'
+        controls
+        className='hidden'
+        ref={audioRef}
+      />
+
+      <div className='flex gap-3 items-center h-5 relative overflow-hidden w-[495px]'>
+        <div className='w-12 flex justify-end'>
+          <p className='text-xs font-sans text-textGray'>0.00</p>
+        </div>
+
+        <div className='w-full relative flex items-center group h-1 rounded-xl bg-tempBarColor'>
+          <div
+            style={{ width: `${valueRangeState.valueRep}px` }}
+            className='h-1 peer rounded-3xl bg-textWhite group-hover:bg-textGreenSpotify'
+          />
+          <div className='w-3 h-3 invisible group-hover:visible rounded-full bg-textWhite' />
+        </div>
+
+        <div className='w-12'>
+          <p className='text-xs font-sans text-textGray'>{durationSong}</p>
+        </div>
       </div>
     </div>
   )
 }
+
+// audio.currentTime --> Tiempo transcurrido
+// audio.duration --> Duracion total en segundos
+// audio.playbackRate --> Velocidad de reproduccion de audio, va de 0 hasta 4
+
+// setAudioState({
+//   ...audioState,
+//   songState: !songState,
+//   durationSong: audio.duration
+// })
+// audio.volume = 0.2
+// console.log(audio.paused)
+
+// if (audio.paused === true) {
+//   audio.play()
+//   audio.paused = false
+// } else {
+//   audio.pause()
+//   console.log(audio.paused)
+//   audio.paused = true
+// }

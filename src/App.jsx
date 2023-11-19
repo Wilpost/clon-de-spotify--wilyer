@@ -7,9 +7,6 @@ import { InfoReproSong } from './components/InfoReproSong'
 import './index.css'
 
 const App = () => {
-  const functionPlay = (e) => {
-    console.log(e)
-  }
   return (
     <>
       <AudioContextProvider>

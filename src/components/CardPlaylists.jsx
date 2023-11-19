@@ -1,13 +1,13 @@
 import { useAudio } from '../hooks/useAudio'
 import { IconPause, IconPlay } from '../icons/Icons'
 
-export function CardPlaylists() {
+export const CardPlaylists = () => {
   const { audioState, songState, setAudioState } = useAudio()
 
   const handleClick = () => {
     setAudioState({
       ...audioState,
-      songState: songState ? false : true,
+      songState: !songState
     })
   }
 
@@ -33,16 +33,22 @@ export function CardPlaylists() {
         </div>
       </div>
 
-      <div className='w-full z-20 h-full invisible right-[20px] top-7 transition-translate duration-300 group-hover:translate-y-[-10px] opacity-0 group-hover:opacity-100 group-hover:visible group-hover:visible flex absolute justify-end items-center'>
+      <div
+        className={`w-full z-20 h-full ${
+          songState
+            ? 'invisible opacity-0'
+            : 'visible opacity-100 translate-y-[-10px]'
+        } right-[20px] top-7 transition-translate duration-300 group-hover:translate-y-[-10px] group-hover:opacity-100 group-hover:visible group-hover:visible flex absolute justify-end items-center`}
+      >
         <button
           onClick={handleClick}
           className='bg-textGreenSpotify z-70 hover:scale-105 active:scale-95 p-3 w-[50px] h-[50px] grid place-content-center rounded-full'
         >
-          {songState ? <IconPause w={23} h={23} /> : <IconPlay w={20} h={20} />}
+          {songState ? <IconPlay w={20} h={20} /> : <IconPause w={23} h={23} />}
         </button>
       </div>
     </article>
   )
 }
 
-//hover:visible invisible peer-hover:animate-fade-up peer-hover:animate-once peer-hover:animate-duration-300 peer-hover:animate-delay-100 peer-hover:animate-fill-both peer-hover:visible h-full w-full
+// hover:visible invisible peer-hover:animate-fade-up peer-hover:animate-once peer-hover:animate-duration-300 peer-hover:animate-delay-100 peer-hover:animate-fill-both peer-hover:visible h-full w-full

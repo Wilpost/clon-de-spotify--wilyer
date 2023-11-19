@@ -2,10 +2,10 @@ import { useAudio } from '../hooks/useAudio'
 import {
   IconAumentVolume,
   IconMicrophone,
-  IconPlaylistTail,
+  IconPlaylistTail
 } from '../icons/Icons'
 
-export function Accesibiliti() {
+export const Accesibiliti = () => {
   const { volumen } = useAudio()
   return (
     <article className='flex gap-5 items-center h-[113px]'>

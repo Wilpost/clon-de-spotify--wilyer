@@ -10,5 +10,7 @@ export const useAudio = () => {
     volumen: audioState.volumen,
     songState: audioState.songState,
     loop: audioState.loop,
+    durationSong: audioState.durationSong,
+    currentTime: audioState.currentTime
   }
 }

@@ -2,11 +2,13 @@ import { createContext, useState } from 'react'
 
 export const AudioContext = createContext()
 
-export function AudioContextProvider({ children }) {
+export const AudioContextProvider = ({ children }) => {
   const [audioState, setAudioState] = useState({
     volumen: 0,
-    songState: false,
+    songState: true,
     loop: true,
+    durationSong: '0.00',
+    currentTime: '0.00'
   })
 
   return (
