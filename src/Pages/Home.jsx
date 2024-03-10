@@ -1,19 +1,18 @@
 import { ListPlaylist } from '../components/ListsPlaylist'
-import { Navbar } from '../components/Navbar'
-import { SectionMyListPlayList } from '../components/SectionMyPlayList'
+import { SectionInfoTrends } from '../components/SectionInfoTrends'
 
 export const Home = () => {
   return (
-    <main className='flex gap-[8px] h-[84vh] w-full'>
-      <aside className='flex flex-col gap-[8px]'>
-        <Navbar />
-        <SectionMyListPlayList />
-      </aside>
-      <div
-        data-testid='LayoutResizer__resize-bar'
-        className='h-full w-[2px] resize-x cursor-ew-resize'
-      />
-      <ListPlaylist />
-    </main>
+    <>
+      <header className='pl-4 p-4 grid grid-cols-recentCardsGrid gap-2'>
+        <ListPlaylist />
+      </header>
+
+      <section className='w-full flex flex-col gap-7 pl-4'>
+        <SectionInfoTrends title='Hecho para Wilyer' />
+        <SectionInfoTrends title='Escuchados recientemente' />
+        <SectionInfoTrends title='Tus artistas favorito' />
+      </section>
+    </>
   )
 }

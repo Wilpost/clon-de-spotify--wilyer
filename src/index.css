@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap');
 
 body {
   background-color: #000;
@@ -8,6 +9,32 @@ body {
   box-sizing: border-box;
   padding: 10px 10px 0px 10px;
   overflow: hidden;
+  /* font-family: 'Inter', sans-serif; */
+}
+.mainSection::-webkit-scrollbar {
+  background: transparent;
+  width: 14px;
+}
+
+.mainSection::-webkit-scrollbar-track {
+  background: transparent;
+  position: absolute;
+  z-index: 444;
+}
+
+.mainSection::-webkit-scrollbar-thumb {
+  background-color: rgba(126, 125, 125, 0.438); /* color of the scroll thumb */
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 350px 1fr;
+  grid-template-areas:
+    'aside main main'
+    'footer footer footer';
 }
 
 .textarea {

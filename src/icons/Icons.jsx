@@ -12,16 +12,80 @@ export const IconHome = () => {
   )
 }
 
-export const IconSearch = () => {
+export const ViewSong = () => {
+  return (
+    <svg
+      height={19}
+      width={18}
+      data-encore-id='icon'
+      role='img'
+      aria-hidden='true'
+      viewBox='0 0 16 16'
+      fill='#999'
+      className='Svg-sc-ytk21e-0 kPpCsU'
+    >
+      <path d='M11.196 8 6 5v6l5.196-3z' />
+      <path d='M15.002 1.75A1.75 1.75 0 0 0 13.252 0h-10.5a1.75 1.75 0 0 0-1.75 1.75v12.5c0 .966.783 1.75 1.75 1.75h10.5a1.75 1.75 0 0 0 1.75-1.75V1.75zm-1.75-.25a.25.25 0 0 1 .25.25v12.5a.25.25 0 0 1-.25.25h-10.5a.25.25 0 0 1-.25-.25V1.75a.25.25 0 0 1 .25-.25h10.5z' />
+    </svg>
+  )
+}
+
+export const IconFixed = () => {
+  return (
+    <svg
+      data-encore-id='icon'
+      role='img'
+      aria-hidden='false'
+      className='Svg-sc-ytk21e-0 kLkTcI G7aCptcOZswI1fN6dGkO h-3 w-3'
+      viewBox='0 0 16 16'
+      fill='#1ed760'
+    >
+      <title>Fijado</title>
+      <path d='M8.822.797a2.72 2.72 0 0 1 3.847 0l2.534 2.533a2.72 2.72 0 0 1 0 3.848l-3.678 3.678-1.337 4.988-4.486-4.486L1.28 15.78a.75.75 0 0 1-1.06-1.06l4.422-4.422L.156 5.812l4.987-1.337L8.822.797z' />
+    </svg>
+  )
+}
+
+export const PlusIcon = () => {
   return (
     <svg
       data-encore-id='icon'
       role='img'
       aria-hidden='true'
-      className='fill-textWhite w-[24px] h-[24px] Svg-sc-ytk21e-0 iYxpxA search-icon'
-      viewBox='0 0 24 24'
+      viewBox='0 0 16 16'
+      className='Svg-sc-ytk21e-0 dYnaPI fill-textWhite w-4'
+    >
+      <path d='M15.25 8a.75.75 0 0 1-.75.75H8.75v5.75a.75.75 0 0 1-1.5 0V8.75H1.5a.75.75 0 0 1 0-1.5h5.75V1.5a.75.75 0 0 1 1.5 0v5.75h5.75a.75.75 0 0 1 .75.75z' />
+    </svg>
+  )
+}
+
+export const IconSearch = ({ w = 24, h = 24 }) => {
+  return (
+    <svg
+      data-encore-id='icon'
+      role='img'
+      aria-hidden='true'
+      width={w}
+      height={h}
+      className='fill-textWhite Svg-sc-ytk21e-0 iYxpxA'
+      viewBox='0 0 23 23'
     >
       <path d='M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 1 0 1.414-1.414l-4.344-4.344a9.157 9.157 0 0 0 2.077-5.816c0-5.14-4.226-9.28-9.407-9.28zm-7.407 9.279c0-4.006 3.302-7.28 7.407-7.28s7.407 3.274 7.407 7.28-3.302 7.279-7.407 7.279-7.407-3.273-7.407-7.28z' />
+    </svg>
+  )
+}
+
+export const IconList = () => {
+  return (
+    <svg
+      data-encore-id='icon'
+      role='img'
+      aria-hidden='true'
+      viewBox='0 0 16 16'
+      className='h-4 w-4 fill-textWhite'
+    >
+      <path d='M15 14.5H5V13h10v1.5zm0-5.75H5v-1.5h10v1.5zM15 3H5V1.5h10V3zM3 3H1V1.5h2V3zm0 11.5H1V13h2v1.5zm0-5.75H1v-1.5h2v1.5z' />
     </svg>
   )
 }
@@ -33,33 +97,29 @@ export const IconBiblioteca = () => {
       role='img'
       aria-hidden='true'
       viewBox='0 0 24 24'
-      className='w-[24px] h-[24px] Svg-sc-ytk21e-0 iYxpxA'
+      className='w-[24px] h-[24px] fill-textWhite'
     >
-      <path
-        fill='#b3b3b3'
-        d='M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z'
-      />
+      <path d='M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z' />
     </svg>
   )
 }
 
-export const IconPause = ({ w, h }) => {
+export const IconPause = () => {
   return (
     <svg
       data-encore-id='icon'
       role='img'
-      width={w}
-      height={h}
-      aria-hidden='true'
-      viewBox='0 0 24 24'
-      className='Svg-sc-ytk21e-0 iYxpxA'
+      width={19}
+      height={19}
+      viewBox='0 0 16 16'
+      className='Svg-sc-ytk21e-0 kPpCsU'
     >
-      <path d='M5.7 3a.7.7 0 0 0-.7.7v16.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V3.7a.7.7 0 0 0-.7-.7H5.7zm10 0a.7.7 0 0 0-.7.7v16.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V3.7a.7.7 0 0 0-.7-.7h-2.6z' />
+      <path d='M2.7 1a.7.7 0 0 0-.7.7v12.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7H2.7zm8 0a.7.7 0 0 0-.7.7v12.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7h-2.6z' />
     </svg>
   )
 }
 
-export const IconPlay = ({ w, h }) => {
+export const IconPlay = ({ w, h, className = '#0a0a0a' }) => {
   return (
     <span>
       <svg
@@ -69,12 +129,9 @@ export const IconPlay = ({ w, h }) => {
         viewBox='0 0 16 16'
         width={w}
         height={h}
-        className='Svg-sc-ytk21e-0 kPpCsU'
+        className={className}
       >
-        <path
-          fill='#0a0a0a'
-          d='M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z'
-        />
+        <path d='M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z' />
       </svg>
     </span>
   )
@@ -135,12 +192,9 @@ export const IconViewMore = () => {
       role='img'
       aria-hidden='true'
       viewBox='0 0 16 16'
-      className='w-[20px] h-[28px] Svg-sc-ytk21e-0 kgVuXA'
+      className='w-[17px] h-[28px] fill-textWhite'
     >
-      <path
-        fill='rgba(179, 179, 179, 0.5)'
-        d='M7.19 1A.749.749 0 0 1 8.47.47L16 7.99l-7.53 7.521a.75.75 0 0 1-1.234-.815.75.75 0 0 1 .174-.243l5.72-5.714H.75a.75.75 0 1 1 0-1.498h12.38L7.41 1.529a.749.749 0 0 1-.22-.53z'
-      />
+      <path d='M7.19 1A.749.749 0 0 1 8.47.47L16 7.99l-7.53 7.521a.75.75 0 0 1-1.234-.815.75.75 0 0 1 .174-.243l5.72-5.714H.75a.75.75 0 1 1 0-1.498h12.38L7.41 1.529a.749.749 0 0 1-.22-.53z' />
     </svg>
   )
 }
@@ -151,13 +205,26 @@ export const IconNotifications = () => {
       data-encore-id='icon'
       role='img'
       aria-hidden='true'
-      className='w-[17px] h-[17px] Svg-sc-ytk21e-0 kPpCsU t93PZphItuM19kPhX7tC'
+      className='w-[15px] h-[15px] Svg-sc-ytk21e-0 kPpCsU t93PZphItuM19kPhX7tC fill-textComun'
       viewBox='0 0 16 16'
     >
-      <path
-        fill='rgb(179, 179, 179)'
-        d='M8 1.5a4 4 0 0 0-4 4v3.27a.75.75 0 0 1-.1.373L2.255 12h11.49L12.1 9.142a.75.75 0 0 1-.1-.374V5.5a4 4 0 0 0-4-4zm-5.5 4a5.5 5.5 0 0 1 11 0v3.067l2.193 3.809a.75.75 0 0 1-.65 1.124H10.5a2.5 2.5 0 0 1-5 0H.957a.75.75 0 0 1-.65-1.124L2.5 8.569V5.5zm4.5 8a1 1 0 1 0 2 0H7z'
-      />
+      <path d='M8 1.5a4 4 0 0 0-4 4v3.27a.75.75 0 0 1-.1.373L2.255 12h11.49L12.1 9.142a.75.75 0 0 1-.1-.374V5.5a4 4 0 0 0-4-4zm-5.5 4a5.5 5.5 0 0 1 11 0v3.067l2.193 3.809a.75.75 0 0 1-.65 1.124H10.5a2.5 2.5 0 0 1-5 0H.957a.75.75 0 0 1-.65-1.124L2.5 8.569V5.5zm4.5 8a1 1 0 1 0 2 0H7z' />
+    </svg>
+  )
+}
+
+export function IconOptions({ w = 16, h = 16 }) {
+  return (
+    <svg
+      data-encore-id='icon'
+      role='img'
+      width={w}
+      height={h}
+      aria-hidden='true'
+      viewBox='0 0 24 24'
+      className='cursor-pointer fill-textGray'
+    >
+      <path d='M4.5 13.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm15 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm-7.5 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z' />
     </svg>
   )
 }
@@ -170,12 +237,9 @@ export const IconAccount = () => {
       aria-hidden='true'
       data-testid='user-icon'
       viewBox='0 0 16 16'
-      className='w-[17px] h-[17px] Svg-sc-ytk21e-0 kPpCsU'
+      className='w-[15px] h-[15px] Svg-sc-ytk21e-0 kPpCsU fill-textComun'
     >
-      <path
-        fill='rgb(255, 255, 255)'
-        d='M6.233.371a4.388 4.388 0 0 1 5.002 1.052c.421.459.713.992.904 1.554.143.421.263 1.173.22 1.894-.078 1.322-.638 2.408-1.399 3.316l-.127.152a.75.75 0 0 0 .201 1.13l2.209 1.275a4.75 4.75 0 0 1 2.375 4.114V16H.382v-1.143a4.75 4.75 0 0 1 2.375-4.113l2.209-1.275a.75.75 0 0 0 .201-1.13l-.126-.152c-.761-.908-1.322-1.994-1.4-3.316-.043-.721.077-1.473.22-1.894a4.346 4.346 0 0 1 .904-1.554c.411-.448.91-.807 1.468-1.052zM8 1.5a2.888 2.888 0 0 0-2.13.937 2.85 2.85 0 0 0-.588 1.022c-.077.226-.175.783-.143 1.323.054.921.44 1.712 1.051 2.442l.002.001.127.153a2.25 2.25 0 0 1-.603 3.39l-2.209 1.275A3.25 3.25 0 0 0 1.902 14.5h12.196a3.25 3.25 0 0 0-1.605-2.457l-2.209-1.275a2.25 2.25 0 0 1-.603-3.39l.127-.153.002-.001c.612-.73.997-1.52 1.052-2.442.032-.54-.067-1.097-.144-1.323a2.85 2.85 0 0 0-.588-1.022A2.888 2.888 0 0 0 8 1.5z'
-      />
+      <path d='M6.233.371a4.388 4.388 0 0 1 5.002 1.052c.421.459.713.992.904 1.554.143.421.263 1.173.22 1.894-.078 1.322-.638 2.408-1.399 3.316l-.127.152a.75.75 0 0 0 .201 1.13l2.209 1.275a4.75 4.75 0 0 1 2.375 4.114V16H.382v-1.143a4.75 4.75 0 0 1 2.375-4.113l2.209-1.275a.75.75 0 0 0 .201-1.13l-.126-.152c-.761-.908-1.322-1.994-1.4-3.316-.043-.721.077-1.473.22-1.894a4.346 4.346 0 0 1 .904-1.554c.411-.448.91-.807 1.468-1.052zM8 1.5a2.888 2.888 0 0 0-2.13.937 2.85 2.85 0 0 0-.588 1.022c-.077.226-.175.783-.143 1.323.054.921.44 1.712 1.051 2.442l.002.001.127.153a2.25 2.25 0 0 1-.603 3.39l-2.209 1.275A3.25 3.25 0 0 0 1.902 14.5h12.196a3.25 3.25 0 0 0-1.605-2.457l-2.209-1.275a2.25 2.25 0 0 1-.603-3.39l.127-.153.002-.001c.612-.73.997-1.52 1.052-2.442.032-.54-.067-1.097-.144-1.323a2.85 2.85 0 0 0-.588-1.022A2.888 2.888 0 0 0 8 1.5z' />
     </svg>
   )
 }
@@ -191,22 +255,6 @@ export const IconSearchSelected = () => {
     >
       <path d='M15.356 10.558c0 2.623-2.16 4.75-4.823 4.75-2.664 0-4.824-2.127-4.824-4.75s2.16-4.75 4.824-4.75c2.664 0 4.823 2.127 4.823 4.75z' />
       <path d='M1.126 10.558c0-5.14 4.226-9.28 9.407-9.28 5.18 0 9.407 4.14 9.407 9.28a9.157 9.157 0 0 1-2.077 5.816l4.344 4.344a1 1 0 0 1-1.414 1.414l-4.353-4.353a9.454 9.454 0 0 1-5.907 2.058c-5.18 0-9.407-4.14-9.407-9.28zm9.407-7.28c-4.105 0-7.407 3.274-7.407 7.28s3.302 7.279 7.407 7.279 7.407-3.273 7.407-7.28c0-4.005-3.302-7.278-7.407-7.278z' />
-    </svg>
-  )
-}
-
-export const IconAumentVolume = () => {
-  return (
-    <svg
-      data-encore-id='icon'
-      role='presentation'
-      aria-label='Volumen medio'
-      aria-hidden='true'
-      id='volume-icon'
-      viewBox='0 0 16 16'
-      className='fill-textGray hover:fill-textWhite active:fill-textGreenSpotify cursor-pointer w-[16px] h-[16px] Svg-sc-ytk21e-0 kPpCsUh'
-    >
-      <path d='M9.741.85a.75.75 0 0 1 .375.65v13a.75.75 0 0 1-1.125.65l-6.925-4a3.642 3.642 0 0 1-1.33-4.967 3.639 3.639 0 0 1 1.33-1.332l6.925-4a.75.75 0 0 1 .75 0zm-6.924 5.3a2.139 2.139 0 0 0 0 3.7l5.8 3.35V2.8l-5.8 3.35zm8.683 6.087a4.502 4.502 0 0 0 0-8.474v1.65a2.999 2.999 0 0 1 0 5.175v1.649z' />
     </svg>
   )
 }
@@ -254,14 +302,16 @@ export const IconViewerMusic = () => {
   )
 }
 
-export const IconMusicsRandom = () => {
+export const IconMusicsRandom = ({ w = 16, h = 16 }) => {
   return (
     <svg
       data-encore-id='icon'
       role='img'
+      height={h}
+      width={w}
       aria-hidden='true'
       viewBox='0 0 16 16'
-      className='fill-textGray hover:fill-textWhite active:fill-textGreenSpotify cursor-pointer w-[16px] h-[16px] Svg-sc-ytk21e-0 kPpCsUh'
+      className='fill-textGray hover:fill-textWhite active:fill-textGreenSpotify cursor-pointer Svg-sc-ytk21e-0 kPpCsUh'
     >
       <path d='M13.151.922a.75.75 0 1 0-1.06 1.06L13.109 3H11.16a3.75 3.75 0 0 0-2.873 1.34l-6.173 7.356A2.25 2.25 0 0 1 .39 12.5H0V14h.391a3.75 3.75 0 0 0 2.873-1.34l6.173-7.356a2.25 2.25 0 0 1 1.724-.804h1.947l-1.017 1.018a.75.75 0 0 0 1.06 1.06L15.98 3.75 13.15.922zM.391 3.5H0V2h.391c1.109 0 2.16.49 2.873 1.34L4.89 5.277l-.979 1.167-1.796-2.14A2.25 2.25 0 0 0 .39 3.5z' />
       <path d='m7.5 10.723.98-1.167.957 1.14a2.25 2.25 0 0 0 1.724.804h1.947l-1.017-1.018a.75.75 0 1 1 1.06-1.06l2.829 2.828-2.829 2.828a.75.75 0 1 1-1.06-1.06L13.109 13H11.16a3.75 3.75 0 0 1-2.873-1.34l-.787-.938z' />
@@ -346,16 +396,92 @@ export const IconNotificationSelected = () => {
   )
 }
 
-export const IconAddMyPlaylist = () => {
+export const IconAddMyPlaylist = ({ w = 16, h = 16 }) => {
   return (
     <svg
       data-encore-id='icon'
       role='img'
+      width={w}
+      height={h}
       aria-hidden='true'
       viewBox='0 0 16 16'
-      class='fill-textGray hover:fill-textWhite active:fill-textGreenSpotify cursor-pointer w-[16px] h-[16px] Svg-sc-ytk21e-0 kPpCsUh'
+      className='opacity-25 fill-textGray hover:fill-textWhite active:fill-textGreenSpotify cursor-pointer Svg-sc-ytk21e-0 kPpCsUh'
     >
-      <path d='M1.69 2A4.582 4.582 0 0 1 8 2.023 4.583 4.583 0 0 1 11.88.817h.002a4.618 4.618 0 0 1 3.782 3.65v.003a4.543 4.543 0 0 1-1.011 3.84L9.35 14.629a1.765 1.765 0 0 1-2.093.464 1.762 1.762 0 0 1-.605-.463L1.348 8.309A4.582 4.582 0 0 1 1.689 2zm3.158.252A3.082 3.082 0 0 0 2.49 7.337l.005.005L7.8 13.664a.264.264 0 0 0 .311.069.262.262 0 0 0 .09-.069l5.312-6.33a3.043 3.043 0 0 0 .68-2.573 3.118 3.118 0 0 0-2.551-2.463 3.079 3.079 0 0 0-2.612.816l-.007.007a1.501 1.501 0 0 1-2.045 0l-.009-.008a3.082 3.082 0 0 0-2.121-.861z'></path>
+      <path d='M1.69 2A4.582 4.582 0 0 1 8 2.023 4.583 4.583 0 0 1 11.88.817h.002a4.618 4.618 0 0 1 3.782 3.65v.003a4.543 4.543 0 0 1-1.011 3.84L9.35 14.629a1.765 1.765 0 0 1-2.093.464 1.762 1.762 0 0 1-.605-.463L1.348 8.309A4.582 4.582 0 0 1 1.689 2zm3.158.252A3.082 3.082 0 0 0 2.49 7.337l.005.005L7.8 13.664a.264.264 0 0 0 .311.069.262.262 0 0 0 .09-.069l5.312-6.33a3.043 3.043 0 0 0 .68-2.573 3.118 3.118 0 0 0-2.551-2.463 3.079 3.079 0 0 0-2.612.816l-.007.007a1.501 1.501 0 0 1-2.045 0l-.009-.008a3.082 3.082 0 0 0-2.121-.861z' />
+    </svg>
+  )
+}
+
+export const EmptyVolume = () => {
+  return (
+    <svg
+      data-encore-id='icon'
+      role='presentation'
+      aria-label='Volumen apagado'
+      aria-hidden='true'
+      id='volume-icon'
+      height={20}
+      width={20}
+      viewBox='0 0 16 16'
+      className='fill-textWhite opacity-50 Svg-sc-ytk21e-0 kcUFwU'
+    >
+      <path d='M13.86 5.47a.75.75 0 0 0-1.061 0l-1.47 1.47-1.47-1.47A.75.75 0 0 0 8.8 6.53L10.269 8l-1.47 1.47a.75.75 0 1 0 1.06 1.06l1.47-1.47 1.47 1.47a.75.75 0 0 0 1.06-1.06L12.39 8l1.47-1.47a.75.75 0 0 0 0-1.06z' />
+      <path d='M10.116 1.5A.75.75 0 0 0 8.991.85l-6.925 4a3.642 3.642 0 0 0-1.33 4.967 3.639 3.639 0 0 0 1.33 1.332l6.925 4a.75.75 0 0 0 1.125-.649v-1.906a4.73 4.73 0 0 1-1.5-.694v1.3L2.817 9.852a2.141 2.141 0 0 1-.781-2.92c.187-.324.456-.594.78-.782l5.8-3.35v1.3c.45-.313.956-.55 1.5-.694V1.5z' />
+    </svg>
+  )
+}
+
+export const FirstVolume = () => {
+  return (
+    <svg
+      data-encore-id='icon'
+      role='presentation'
+      aria-label='Volumen bajo'
+      aria-hidden='true'
+      id='volume-icon'
+      height={20}
+      width={20}
+      viewBox='0 0 16 16'
+      className='fill-textWhite opacity-50 Svg-sc-ytk21e-0 kcUFwU'
+    >
+      <path d='M9.741.85a.75.75 0 0 1 .375.65v13a.75.75 0 0 1-1.125.65l-6.925-4a3.642 3.642 0 0 1-1.33-4.967 3.639 3.639 0 0 1 1.33-1.332l6.925-4a.75.75 0 0 1 .75 0zm-6.924 5.3a2.139 2.139 0 0 0 0 3.7l5.8 3.35V2.8l-5.8 3.35zm8.683 4.29V5.56a2.75 2.75 0 0 1 0 4.88z' />
+    </svg>
+  )
+}
+
+export const MedioVolume = () => {
+  return (
+    <svg
+      data-encore-id='icon'
+      role='presentation'
+      aria-label='Volumen medio'
+      aria-hidden='true'
+      id='volume-icon'
+      height={20}
+      width={20}
+      viewBox='0 0 16 16'
+      className='opacity-50 fill-textWhite active:fill-textGreenSpotify cursor-pointer Svg-sc-ytk21e-0 kPpCsUh'
+    >
+      <path d='M9.741.85a.75.75 0 0 1 .375.65v13a.75.75 0 0 1-1.125.65l-6.925-4a3.642 3.642 0 0 1-1.33-4.967 3.639 3.639 0 0 1 1.33-1.332l6.925-4a.75.75 0 0 1 .75 0zm-6.924 5.3a2.139 2.139 0 0 0 0 3.7l5.8 3.35V2.8l-5.8 3.35zm8.683 6.087a4.502 4.502 0 0 0 0-8.474v1.65a2.999 2.999 0 0 1 0 5.175v1.649z' />
+    </svg>
+  )
+}
+
+export const CompleteVolume = () => {
+  return (
+    <svg
+      data-encore-id='icon'
+      role='presentation'
+      aria-label='Volumen alto'
+      aria-hidden='true'
+      height={20}
+      width={20}
+      id='volume-icon'
+      viewBox='0 0 16 16'
+      className='fill-textWhite opacity-50 Svg-sc-ytk21e-0 kcUFwU'
+    >
+      <path d='M9.741.85a.75.75 0 0 1 .375.65v13a.75.75 0 0 1-1.125.65l-6.925-4a3.642 3.642 0 0 1-1.33-4.967 3.639 3.639 0 0 1 1.33-1.332l6.925-4a.75.75 0 0 1 .75 0zm-6.924 5.3a2.139 2.139 0 0 0 0 3.7l5.8 3.35V2.8l-5.8 3.35zm8.683 4.29V5.56a2.75 2.75 0 0 1 0 4.88z' />
+      <path d='M11.5 13.614a5.752 5.752 0 0 0 0-11.228v1.55a4.252 4.252 0 0 1 0 8.127v1.55z' />
     </svg>
   )
 }

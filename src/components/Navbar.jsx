@@ -1,23 +1,24 @@
+import { Link } from 'react-router-dom'
 import { IconHome, IconSearch } from '../icons/Icons'
 
 export const Navbar = () => {
   return (
-    <nav className='opacity-90 bg-groundColor w-[400px] h-28 rounded-lg pl-5 flex flex-col justify-evenly'>
+    <nav className='bg-groundColor w-full h-28 rounded-lg pl-5 flex flex-col justify-evenly p-2'>
       <ul className='flex flex-col h-full gap-2 w-full justify-evenly'>
         <li>
-          <a
-            href='#'
-            className='flex opacity-75 gap-5 font-bold text-base text-textWhite items-center hover:opacity-100 transition-opacity duration-200'
+          <Link
+            to='/'
+            className='flex opacity-75 gap-5 font-semibold text-base text-textWhite items-center hover:opacity-100 transition-opacity p-2 duration-200'
           >
             <IconHome />
             Inicio
-          </a>
+          </Link>
         </li>
 
         <li>
           <a
             href='#'
-            className='flex opacity-75 gap-5 font-bold text-base text-textWhite items-center hover:opacity-100 transition-opacity duration-200'
+            className='flex opacity-75 gap-5 font-semibold text-base text-textWhite items-center hover:opacity-100 transition-opacity p-2 duration-200'
           >
             <IconSearch />
             Buscar
